@@ -1,3 +1,5 @@
 venv
 Jenkinsfile
 build.sh
+*.xlsx
+out

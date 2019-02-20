@@ -1,3 +1,5 @@
 venv
-
 *.xlsx
+!sample.xlsx
+out
+.DS_Store
