@@ -3,3 +3,4 @@ Jenkinsfile
 build.sh
 *.xlsx
 out
+.DS_Store

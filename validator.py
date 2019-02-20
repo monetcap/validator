@@ -81,20 +81,12 @@ class Sheet:
 
         self._enumerate_phone_column()
 
-        # log to debug initialization of Sheet object
-        log.debug('<Sheet title={0} phone_column_index={1}>'.format(
-            self.title, self.phone_column_index
-        ))
-
     def validate(self):
         for row in self.sheet.rows:
             self._validate_row(row)
 
         self._write_results_to_workbook(self.valid_rows, 'valid')
         self._write_results_to_workbook(self.invalid_rows, 'invalid')
-
-        log.debug('invalid_rows:\n{}'.format(self.invalid_rows))
-        log.debug('valid_rows:\n{}'.format(self.valid_rows))
 
     def _validate_row(self, row):
         cell_values = self._get_cell_values_from_row(row)
