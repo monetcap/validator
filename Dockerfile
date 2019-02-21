@@ -10,6 +10,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ENTRYPOINT [ "python", "./validator.py" ]
+ENTRYPOINT [ "python", "./main.py" ]
 
 CMD [ "--help" ]
