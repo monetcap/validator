@@ -12,8 +12,8 @@ def main():
                   api_url=args.api_url,
                   api_token=args.api_token)
 
-    values = v.validate_workbook_rows()
-    print(values)
+    validated_rows = v.validate_workbook_rows()
+    v.export_validated_rows(validated_rows)
 
 
 if __name__ == '__main__':

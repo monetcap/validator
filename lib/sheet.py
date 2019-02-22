@@ -63,14 +63,3 @@ class Sheet:
     def validate_row_values(self):
         return [self.api.validate_row(row, self.phone_column_index)
                 for row in self.get_row_values()]
-
-    # def _write_results_to_workbook(self, results, workbook_name):
-    #     wb = PyxlWorkbook()
-    #
-    #     ws = wb.active
-    #     ws.title = workbook_name
-    #
-    #     for res in results:
-    #         ws.append(res)
-    #
-    #     wb.save(filename="/tmp/out/" + workbook_name + ".xlsx")
