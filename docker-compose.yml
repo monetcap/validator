@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  validator:
+    build: .
+    image: monetcap/validator:latest
+    entrypoint: /bin/sh
+    command: -c "sleep 365d"
+    volumes:
+      - ./output:/usr/src/app/output
+      - ./samples:/usr/src/app/samples

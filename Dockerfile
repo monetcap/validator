@@ -10,6 +10,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-ENTRYPOINT [ "python", "./main.py" ]
+RUN chmod +x main.py
+RUN ln -s $(pwd)/main.py /bin/validator
+
+ENTRYPOINT [ "validator" ]
 
 CMD [ "--help" ]

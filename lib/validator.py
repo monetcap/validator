@@ -37,5 +37,9 @@ class Validator:
     def export_validated_rows(self, rows):
         sorted_rows = self.sort_validated_rows(rows)
 
-        write_rows_to_workbook(sorted_rows.get('invalid'), './', 'invalid')
-        write_rows_to_workbook(sorted_rows.get('valid'), './', 'valid')
+        write_rows_to_workbook(sorted_rows.get('invalid'),
+                               './output',
+                               'invalid')
+        write_rows_to_workbook(sorted_rows.get('valid'),
+                               './output',
+                               'valid')

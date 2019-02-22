@@ -1,7 +1,9 @@
-venv
-*.xlsx
-!sample.xlsx
-out
 .DS_Store
 
 __pycache__
+venv
+
+*.log
+
+*.xlsx
+/!sample.xlsx

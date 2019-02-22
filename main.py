@@ -1,3 +1,5 @@
+#!/usr/local/bin/python
+
 from lib.validator import Validator
 from lib.argparser import parser
 import lib.logger

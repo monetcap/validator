@@ -1,6 +1,8 @@
 venv
+
 Jenkinsfile
-build.sh
+
 *.xlsx
-out
+*.log
+
 .DS_Store

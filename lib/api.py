@@ -8,7 +8,7 @@ log = logging.getLogger(__name__)
 
 
 class Api:
-    FORMAT = 'json'
+    OUTPUT = 'json'
 
     def __init__(self, url, token):
         self.url = url
@@ -25,7 +25,7 @@ class Api:
         payload = {
             'token': self.token,
             'phone': phone,
-            'format': self.FORMAT
+            'output': self.OUTPUT
         }
 
         r = requests.get(self.url, params=payload)
@@ -49,6 +49,8 @@ class Api:
             is_valid = False
         if resp['dma'] != 'N':
             is_valid = False
+
+        log.debug('{} is valid? {}'.format(phone, is_valid))
 
         return is_valid
 
